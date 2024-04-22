@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Irish Potato Famine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Great Irish Potato Famine</h1>
+
+<div class="tab">
+ <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+ <button class="tablinks" onclick="openTab(event, 'Causes')">Causes</button>
+ <button class="tablinks" onclick="openTab(event, 'Impact')">Impact</button>
+ <button class="tablinks" onclick="openTab(event, 'Sources')">Sources</button>
+</div>
+
+<div id="Overview" class="tabcontent">
+ <h3>Overview</h3>
+ <p>The Great Irish Potato Famine was a devastating famine that occurred in Ireland between 1845 and 1852. It was caused by a blight that destroyed the potato crop, which was the staple food of the Irish people.</p>
+</div>
+
+<div id="Causes" class="tabcontent">
+ <h3>Causes</h3>
+ <p>The famine was caused by a combination of factors including the failure of the potato crop due to the blight, the economic policies of the British government, and the lack of preparedness for such a disaster.</p>
+</div>
+
+<div id="Impact" class="tabcontent">
+ <h3>Impact</h3>
+ <p>The famine resulted in the death of approximately 1 million people, making it one of the deadliest famines in history. It also led to mass emigration, with many Irish people moving to the United States and other countries.</p>
+</div>
+
+<div id="Sources" class="tabcontent">
+ <h3>Sources</h3>
+ <p>For more information, please visit:</p>
+ <ul>
+    <li><a href="https://www.britannica.com/event/Great-Irish-Famine">Britannica - Great Irish Famine</a></li>
+    <li><a href="https://www.history.com/topics/ireland/great-famine">History.com - Great Famine</a></li>
+ </ul>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+ var i, tabcontent, tablinks;
+ tabcontent = document.getElementsByClassName("tabcontent");
+ for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+ }
+ tablinks = document.getElementsByClassName("tablinks");
+ for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+ }
+ document.getElementById(tabName).style.display = "block";
+ evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
